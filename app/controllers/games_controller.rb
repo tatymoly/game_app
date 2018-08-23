@@ -15,7 +15,7 @@ class GamesController < ApplicationController
             game.save
             render json: game
         else 
-            render json: { errors: game.errors}
+            render json: { errors: game.errors }
         end
     end
     private
