@@ -28,7 +28,7 @@ class GamesController < ApplicationController
         return game.result = 'win' if dif_cpu_number >= dif_user_number
     end
     def permitted_params
-       params.require(:game).permit(:user_number).merge(
+       params.permit(:user_number).merge(
            cpu_number: rand(1..100)
        )
     end
